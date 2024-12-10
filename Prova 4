@@ -1,0 +1,20 @@
+print("Bem-vindo ao sistema de inicialização do celular!")
+
+senha_cadastrada = input("Cadastre uma nova senha: ")
+print("Senha cadastrada com sucesso!\n")
+
+print("Para inicializar o celular, insira sua senha.")
+tentativas_restantes = 3
+
+for tentativa in range(3):
+    senha_digitada = input("Digite sua senha: ")
+    
+    if senha_digitada == senha_cadastrada:
+        print("Bem-vindo.")
+        break
+    else:
+        tentativas_restantes -= 1
+        if tentativas_restantes > 0:
+            print(f"Senha incorreta. Você ainda tem {tentativas_restantes} tentativa(s).")
+        else:
+            print("Telefone bloqueado. Entre em contato com o suporte.")
